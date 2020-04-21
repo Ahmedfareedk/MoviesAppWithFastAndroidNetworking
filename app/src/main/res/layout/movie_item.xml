@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="8dp"
+    app:cardBackgroundColor="#132555"
+    app:cardCornerRadius="16dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="202dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/movie_poster_image"
+            android:layout_width="160dp"
+            android:layout_height="220dp"
+            android:layout_marginLeft="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/textviews_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/movie_poster_image"
+            app:layout_constraintLeft_toRightOf="@id/movie_poster_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/movie_poster_image">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="Title"
+                android:textColor="@color/movie_title"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rating_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:textColor="@color/movie_director"
+                android:textSize="18sp"
+                tools:text="9.7" />
+
+            <TextView
+                android:id="@+id/movie_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Horror"
+                android:textColor="@color/movie_director"
+                android:textSize="18sp" />
+            
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
