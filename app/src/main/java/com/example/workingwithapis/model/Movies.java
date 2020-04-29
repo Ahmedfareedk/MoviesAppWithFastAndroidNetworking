@@ -1,5 +1,5 @@
 
-package com.example.workingwithapis.api;
+package com.example.workingwithapis.model;
 
 import java.util.List;
 

@@ -12,7 +12,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/movies_recycler"
-      android:background="@color/main_backgorund"
+      android:background="@color/main_background"
       />
 
 </LinearLayout>

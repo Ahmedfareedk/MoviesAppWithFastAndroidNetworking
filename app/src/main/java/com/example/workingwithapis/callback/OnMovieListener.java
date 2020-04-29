@@ -1,6 +1,6 @@
 package com.example.workingwithapis.callback;
 
-import com.example.workingwithapis.api.Movies;
+import com.example.workingwithapis.model.Movies;
 
 public interface OnMovieListener {
     void onResponse(Movies response);

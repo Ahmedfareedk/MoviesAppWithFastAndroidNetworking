@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.workingwithapis.R;
 import com.example.workingwithapis.adapter.MovieAdapter;
-import com.example.workingwithapis.api.Movies;
+import com.example.workingwithapis.model.Movies;
 import com.example.workingwithapis.api.Networking;
 import com.example.workingwithapis.callback.OnMovieListener;
 
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         movieRecyclerview = findViewById(R.id.movies_recycler);
         movieRecyclerview.setLayoutManager(new LinearLayoutManager(this));
+
+
 
         Networking.fetchMovies(new OnMovieListener() {
             @Override
