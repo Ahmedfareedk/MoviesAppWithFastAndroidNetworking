@@ -2,7 +2,6 @@
 package com.example.workingwithapis.model;
 
 import java.util.List;
-
 import com.google.gson.annotations.SerializedName;
 
 
@@ -17,6 +16,8 @@ public class Result {
     private List<Long> mGenreIds;
     @SerializedName("id")
     private Long mId;
+    @SerializedName("media_type")
+    private String mMediaType;
     @SerializedName("original_language")
     private String mOriginalLanguage;
     @SerializedName("original_title")
@@ -68,6 +69,14 @@ public class Result {
 
     public void setId(Long id) {
         mId = id;
+    }
+
+    public String getMediaType() {
+        return mMediaType;
+    }
+
+    public void setMediaType(String mediaType) {
+        mMediaType = mediaType;
     }
 
     public String getOriginalLanguage() {

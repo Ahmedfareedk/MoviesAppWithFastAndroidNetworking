@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
+    <TextView
+        android:id="@+id/review_author_TV_bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/movie_director"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        tools:text="Ahmed Fareed" />
+
+    <TextView
+        android:id="@+id/review_content_TV_bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="start"
+        android:ellipsize="end"
+        android:padding="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/movie_director"
+        tools:text="it's contentit's contentit's contentit's contentit's content" />
+
+</LinearLayout>

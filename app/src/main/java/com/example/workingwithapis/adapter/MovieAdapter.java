@@ -11,9 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.workingwithapis.DetailsTemp;
 import com.example.workingwithapis.R;
 import com.example.workingwithapis.activity.DetailsActivity;
 import com.example.workingwithapis.model.Result;
+import com.example.workingwithapis.model.TrailerResult;
 import com.example.workingwithapis.callback.OnItemClickListener;
 import com.squareup.picasso.Picasso;
 
@@ -22,7 +24,6 @@ import java.util.List;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder> {
     private List<Result> movieList;
     private Context context;
-    private OnItemClickListener onItemClickListener;
 
     public MovieAdapter(List<Result> movieList) {
         this.movieList = movieList;
@@ -67,7 +68,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
     {
         movieTitle.setText(model.getTitle());
         rating.setText(Double.toString(model.getVoteAverage()));
-
         Picasso.get().load(posterPath + model.getPosterPath()).into(imagePoster);
         mview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +79,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
                 intent.putExtra("release_date", model.getReleaseDate());
                 intent.putExtra("backdrop_path", posterPath + model.getBackdropPath());
                 intent.putExtra("overview", model.getOverview());
+                intent.putExtra("movie_id", String.valueOf(model.getId()));
                 context.startActivity(intent);
             }
         });
