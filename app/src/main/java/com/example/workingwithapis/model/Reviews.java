@@ -4,18 +4,26 @@ package com.example.workingwithapis.model;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
+public class Reviews {
 
-
-public class Movies {
-
+    @SerializedName("id")
+    private Long mId;
     @SerializedName("page")
     private Long mPage;
     @SerializedName("results")
-    private List<Result> mResults;
+    private List<ReviewResult> mReviewResults;
     @SerializedName("total_pages")
     private Long mTotalPages;
     @SerializedName("total_results")
     private Long mTotalResults;
+
+    public Long getId() {
+        return mId;
+    }
+
+    public void setId(Long id) {
+        mId = id;
+    }
 
     public Long getPage() {
         return mPage;
@@ -25,12 +33,12 @@ public class Movies {
         mPage = page;
     }
 
-    public List<Result> getResults() {
-        return mResults;
+    public List<ReviewResult> getResults() {
+        return mReviewResults;
     }
 
-    public void setResults(List<Result> results) {
-        mResults = results;
+    public void setResults(List<ReviewResult> reviewResults) {
+        mReviewResults = reviewResults;
     }
 
     public Long getTotalPages() {

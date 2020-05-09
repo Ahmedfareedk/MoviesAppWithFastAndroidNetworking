@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.DetailsActivity">
+
+ <com.google.android.material.appbar.AppBarLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+     android:id="@+id/appBar_layout_details"
+     android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/collapse_layout"
+        app:layout_scrollFlags = "scroll|exitUntilCollapsed"
+        app:contentScrim="@color/toolbar_background"
+
+       >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/movie_poster_backdrop_details"
+            android:scaleType="centerCrop"
+            android:fitsSystemWindows="true"
+            app:layout_collapseMode="parallax"
+            />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:id="@+id/toolbar_details"
+        app:layout_collapseMode="pin"
+        android:visibility="invisible"
+        android:background="@color/toolbar_background"/>
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+ </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include layout="@layout/movie_details_item"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        layout="@layout/bottom_sheet_item"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

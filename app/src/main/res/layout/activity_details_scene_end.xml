@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:orientation="vertical">
 
-        <include layout="@layout/movie_details_item"/>
+        <include layout="@layout/movie_details_item_temp"/>
 
          </LinearLayout>
 

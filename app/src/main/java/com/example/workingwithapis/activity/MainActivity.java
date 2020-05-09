@@ -3,15 +3,13 @@ package com.example.workingwithapis.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.Toast;
-
 import com.example.workingwithapis.R;
 import com.example.workingwithapis.adapter.MovieAdapter;
-import com.example.workingwithapis.model.Movies;
 import com.example.workingwithapis.api.Networking;
 import com.example.workingwithapis.callback.OnMovieListener;
+import com.example.workingwithapis.model.Movies;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView movieRecyclerview;
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Networking.fetchMovies(new OnMovieListener() {
+        Networking.fetchMovies(new OnMovieListener<Movies>() {
             @Override
             public void onResponse(Movies response) {
                 movieRecyclerview.setAdapter(new MovieAdapter(response.getResults()));
